@@ -7,10 +7,10 @@ namespace BlazorCommunication.Client.Components.WeatherForecast;
 public partial class WeatherForecastComponent
 {
     [Inject]
-    private HttpClient HttpClient { get; set; } = default!;
+    public HttpClient HttpClient { get; set; } = default!;
 
     private WeatherForecastViewModel[] Forecasts { get; set; } = [];
 
     protected override async Task OnInitializedAsync() 
-        => Forecasts = (await HttpClient.GetFromJsonAsync<WeatherForecastViewModel[]>("WeatherForecast"))!;
+        => Forecasts = (await HttpClient.GetFromJsonAsync<WeatherForecastViewModel[]>("weather-api/WeatherForecast"))!;
 }

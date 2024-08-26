@@ -3,13 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35219.272
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorCommunication", "BlazorCommunication\BlazorCommunication\BlazorCommunication.csproj", "{EDF23027-2127-412D-8C4E-99EED37CD2FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorCommunication", "BlazorCommunication\BlazorCommunication\BlazorCommunication.csproj", "{EDF23027-2127-412D-8C4E-99EED37CD2FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorCommunication.Client", "BlazorCommunication\BlazorCommunication.Client\BlazorCommunication.Client.csproj", "{15650E1A-C659-435E-9D9F-F4689C2EA9B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorCommunication.Client", "BlazorCommunication\BlazorCommunication.Client\BlazorCommunication.Client.csproj", "{15650E1A-C659-435E-9D9F-F4689C2EA9B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherApi", "WeatherApi\WeatherApi.csproj", "{48086762-E196-487F-8FEF-A967CD360A95}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherApi", "WeatherApi\WeatherApi.csproj", "{48086762-E196-487F-8FEF-A967CD360A95}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared", "Shared\Shared.csproj", "{D7E612FE-57AD-4D3F-B60D-66746379DDB7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared", "Shared\Shared.csproj", "{D7E612FE-57AD-4D3F-B60D-66746379DDB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserApi", "UserApi\UserApi.csproj", "{250AB2D9-6D84-4565-82EF-03882D1FD1B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiGateway", "ApiGateway\ApiGateway.csproj", "{503FB7D8-99B8-4BDB-A511-6948B39CC3F2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{D7E612FE-57AD-4D3F-B60D-66746379DDB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D7E612FE-57AD-4D3F-B60D-66746379DDB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D7E612FE-57AD-4D3F-B60D-66746379DDB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{250AB2D9-6D84-4565-82EF-03882D1FD1B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{250AB2D9-6D84-4565-82EF-03882D1FD1B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{250AB2D9-6D84-4565-82EF-03882D1FD1B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{250AB2D9-6D84-4565-82EF-03882D1FD1B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{503FB7D8-99B8-4BDB-A511-6948B39CC3F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{503FB7D8-99B8-4BDB-A511-6948B39CC3F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{503FB7D8-99B8-4BDB-A511-6948B39CC3F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{503FB7D8-99B8-4BDB-A511-6948B39CC3F2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

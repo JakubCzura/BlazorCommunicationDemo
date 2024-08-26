@@ -5,13 +5,13 @@ WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddScoped(sp =>
 {
-    return new HttpClient { BaseAddress = new Uri("https://localhost:7250") };
+    return new HttpClient { BaseAddress = new Uri("https://localhost:7048") };
 });
 
 
 builder.Services.AddRazorComponents()
-    .AddInteractiveServerComponents()
-    .AddInteractiveWebAssemblyComponents();
+                .AddInteractiveServerComponents()
+                .AddInteractiveWebAssemblyComponents();
 
 WebApplication app = builder.Build();
 
@@ -33,8 +33,8 @@ app.UseStaticFiles();
 app.UseAntiforgery();
 
 app.MapRazorComponents<App>()
-    .AddInteractiveServerRenderMode()
-    .AddInteractiveWebAssemblyRenderMode()
-    .AddAdditionalAssemblies(typeof(BlazorCommunication.Client._Imports).Assembly);
+   .AddInteractiveServerRenderMode()
+   .AddInteractiveWebAssemblyRenderMode()
+   .AddAdditionalAssemblies(typeof(BlazorCommunication.Client._Imports).Assembly);
 
 app.Run();
