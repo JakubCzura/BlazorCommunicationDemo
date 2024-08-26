@@ -11,6 +11,6 @@ public partial class WeatherForecastComponent
 
     private WeatherForecastViewModel[] Forecasts { get; set; } = [];
 
-    protected override async Task OnInitializedAsync() 
+    protected override async Task OnInitializedAsync()
         => Forecasts = (await HttpClient.GetFromJsonAsync<WeatherForecastViewModel[]>("weather-api/WeatherForecast"))!;
 }
