@@ -4,9 +4,9 @@ WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddScoped(sp =>
-
-    new HttpClient { BaseAddress = new Uri(builder.Configuration.GetValue<string>("Api:WeatherApi:Address")!) }
-);
+{
+    return new HttpClient { BaseAddress = new Uri("https://localhost:7250") };
+});
 
 
 builder.Services.AddRazorComponents()

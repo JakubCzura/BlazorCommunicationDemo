@@ -1,0 +1,11 @@
+﻿@using Shared.ViewModels.WeatherApi
+
+<h3>Let's see weather forecast for next days</h3>
+
+@foreach(WeatherForecastViewModel forecast in Forecasts)
+{
+    <p>@forecast.Date</p>
+    <p>@forecast.TemperatureC</p>
+    <p>@forecast.TemperatureF</p>
+    <p>@forecast.Summary</p>
+})
