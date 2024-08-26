@@ -1,14 +1,19 @@
-using BlazorCommunication.Client.Pages;
 using BlazorCommunication.Components;
 
-var builder = WebApplication.CreateBuilder(args);
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddScoped(sp =>
+
+    new HttpClient { BaseAddress = new Uri(builder.Configuration.GetValue<string>("Api:WeatherApi:Address")!) }
+);
+
+
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents()
     .AddInteractiveWebAssemblyComponents();
 
-var app = builder.Build();
+WebApplication app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

@@ -1,5 +1,10 @@
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 
-var builder = WebAssemblyHostBuilder.CreateDefault(args);
+WebAssemblyHostBuilder builder = WebAssemblyHostBuilder.CreateDefault(args);
+
+builder.Services.AddScoped(sp =>
+
+    new HttpClient { BaseAddress = new Uri(builder.Configuration.GetValue<string>("Api:WeatherApi:Address")!) }
+);
 
 await builder.Build().RunAsync();
