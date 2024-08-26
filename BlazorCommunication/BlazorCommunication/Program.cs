@@ -1,13 +1,13 @@
 using BlazorCommunication.Components;
+using Shared.Constants;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddScoped(sp =>
 {
-    return new HttpClient { BaseAddress = new Uri("https://localhost:7048") };
+    return new HttpClient { BaseAddress = new Uri(ApiGatewayConstants.Address) };
 });
-
 
 builder.Services.AddRazorComponents()
                 .AddInteractiveServerComponents()
