@@ -15,7 +15,7 @@ public class WeatherForecastController(ILogger<WeatherForecastController> logger
     [HttpGet]
     public ActionResult<IEnumerable<WeatherForecastViewModel>> Get()
     {
-        logger.LogWarning("HtppGet - WeatherForecast called");
+        logger.LogWarning("HtppGet - api/WeatherForecast called");
 
         WeatherForecastViewModel[] result = Enumerable.Range(1, 5)
                                                       .Select(index => new WeatherForecastViewModel

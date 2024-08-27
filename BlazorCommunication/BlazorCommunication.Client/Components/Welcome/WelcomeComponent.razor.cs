@@ -9,8 +9,15 @@ public partial class WelcomeComponent
     [Inject]
     public HttpClient HttpClient { get; set; } = default!;
 
-    private UserViewModel User { get; set; } = new UserViewModel();
+    [Parameter]
+    public string Name { get; set; } = string.Empty;
+
+    private MessageViewModel Message { get; set; } = new();
 
     protected override async Task OnInitializedAsync()
-        => User = (await HttpClient.GetFromJsonAsync<UserViewModel>("user-api/user/info"))!;
+    {
+        HttpResponseMessage response = await HttpClient.PostAsJsonAsync($"user-api/message/welcome?name={Name}", "");
+        response.EnsureSuccessStatusCode();
+        Message = (await response.Content.ReadFromJsonAsync<MessageViewModel>())!;
+    }
 }

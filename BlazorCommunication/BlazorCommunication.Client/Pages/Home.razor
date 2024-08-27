@@ -1,11 +1,9 @@
 ﻿@page "/"
 
+@using BlazorCommunication.Client.Components.UserInfo
 @using BlazorCommunication.Client.Components.Welcome
-
 <PageTitle>Home</PageTitle>
 
-<h1>Hello, world!</h1>
-
-<p>Welcome to your new app.</p> <br/><br/><br/>
-
-<WelcomeComponent/>
+<WelcomeComponent Name="John"/>
+<br/><br/>
+<UserInfoComponent/>

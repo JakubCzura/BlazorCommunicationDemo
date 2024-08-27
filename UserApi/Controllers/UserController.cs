@@ -8,9 +8,9 @@ namespace UserApi.Controllers;
 public class UserController(ILogger<UserController> logger) : ControllerBase
 {
     [HttpGet("Info")]
-    public ActionResult<UserViewModel> Get()
+    public ActionResult<UserViewModel> GetInfo()
     {
-        logger.LogWarning("HtppGet - User-Info called");
+        logger.LogWarning("HtppGet - api/User/Info called");
 
         UserViewModel user = new()
         {
