@@ -1,16 +1,16 @@
-﻿using Microsoft.AspNetCore.Components;
+﻿using BlazorCommunication.Shared.Application.Services.WeatherApi.Interfaces;
+using Microsoft.AspNetCore.Components;
 using Shared.ViewModels.WeatherApi;
-using System.Net.Http.Json;
 
 namespace BlazorCommunication.Client.Components.WeatherForecast;
 
 public partial class WeatherForecastComponent
 {
     [Inject]
-    public HttpClient HttpClient { get; set; } = default!;
+    public IWeatherForecastService WeatherForecastService { get; set; } = default!;
 
-    private WeatherForecastViewModel[] Forecasts { get; set; } = [];
+    private WeatherForecastViewModel Forecast { get; set; } = new();
 
     protected override async Task OnInitializedAsync()
-        => Forecasts = (await HttpClient.GetFromJsonAsync<WeatherForecastViewModel[]>("weather-api/weatherforecast"))!;
+        => Forecast = await WeatherForecastService.GetWeatherForecastAsync();
 }

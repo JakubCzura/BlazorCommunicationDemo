@@ -1,7 +1,10 @@
 using BlazorCommunication.Components;
 using Shared.Constants;
+using BlazorCommunication.Shared.Application.ExtensionMethods;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddApplicationDI();
 
 // Add services to the container.
 builder.Services.AddScoped(sp =>

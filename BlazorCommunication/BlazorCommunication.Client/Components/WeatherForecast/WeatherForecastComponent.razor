@@ -1,6 +1,4 @@
-﻿@using Shared.ViewModels.WeatherApi
-
-<h4>Let's see weather forecast for next days fetched from <b>WeatherApi</b></h4>
+﻿<h4>Let's see weather forecast for next days fetched from <b>WeatherApi</b></h4>
 
 <table class="table">
     <thead>
@@ -12,14 +10,14 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var forecast in Forecasts)
-    {
-        <tr>
+        @foreach (var forecast in Forecast.WeatherForecasts)
+        {
+            <tr>
                 <td>@forecast.Date.ToShortDateString()</td>
                 <td>@forecast.TemperatureC</td>
                 <td>@forecast.TemperatureF</td>
                 <td>@forecast.Summary</td>
             </tr>
-    }
+        }
     </tbody>
 </table>

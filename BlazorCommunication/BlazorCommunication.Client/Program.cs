@@ -1,7 +1,10 @@
+using BlazorCommunication.Shared.Application.ExtensionMethods;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Shared.Constants;
 
 WebAssemblyHostBuilder builder = WebAssemblyHostBuilder.CreateDefault(args);
+
+builder.Services.AddApplicationDI();
 
 builder.Services.AddScoped(sp =>
 {

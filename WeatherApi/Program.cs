@@ -1,4 +1,8 @@
+using WeatherApi.Application.ExtensionMethods;
+
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddApplicationDI();
 
 // Add services to the container.
 builder.Services.AddControllers();
