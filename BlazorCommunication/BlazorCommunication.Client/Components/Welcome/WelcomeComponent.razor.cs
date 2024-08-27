@@ -12,12 +12,12 @@ public partial class WelcomeComponent
     [Parameter]
     public string Name { get; set; } = string.Empty;
 
-    private MessageViewModel Message { get; set; } = new();
+    private WelcomeMessageViewModel Message { get; set; } = new();
 
     protected override async Task OnInitializedAsync()
     {
         HttpResponseMessage response = await HttpClient.PostAsJsonAsync($"user-api/message/welcome?name={Name}", "");
         response.EnsureSuccessStatusCode();
-        Message = (await response.Content.ReadFromJsonAsync<MessageViewModel>())!;
+        Message = (await response.Content.ReadFromJsonAsync<WelcomeMessageViewModel>())!;
     }
 }

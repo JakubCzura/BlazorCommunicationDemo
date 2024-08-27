@@ -1,23 +1,21 @@
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Shared.Queries.UserApi;
 using Shared.ViewModels.UserApi;
 
 namespace UserApi.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class UserController(ILogger<UserController> logger) : ControllerBase
+public class UserController(ILogger<UserController> logger,
+                            IMediator mediator) : ControllerBase
 {
     [HttpGet("Info")]
-    public ActionResult<UserViewModel> GetInfo()
+    public async Task<ActionResult<UserViewModel>> GetInfo()
     {
         logger.LogWarning("HtppGet - api/User/Info called");
 
-        UserViewModel user = new()
-        {
-            Name = "John",
-            LastName = "Kowalski",
-            Age = 30
-        };
+        UserViewModel user = await mediator.Send(new GetUserInfoQuery());
         return Ok(user);
     }
 }

@@ -1,21 +1,21 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using MediatR;
+using Microsoft.AspNetCore.Mvc;
+using Shared.Commands.UserApi.CreateWelcomeMessage;
 using Shared.ViewModels.UserApi;
 
 namespace UserApi.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class MessageController(ILogger<MessageController> logger) : ControllerBase
+public class MessageController(ILogger<MessageController> logger,
+                               IMediator mediator) : ControllerBase
 {
     [HttpPost("Welcome")]
-    public ActionResult<UserViewModel> GetWelcomeMessage([FromQuery] string Name)
+    public async Task<ActionResult<UserViewModel>> GetWelcomeMessage([FromBody] CreateWelcomeMessageCommand command)
     {
         logger.LogWarning("HtppGet - api/Message/Welcome called");
 
-        MessageViewModel message = new()
-        {
-            Message = $"Hello {Name}, we are so excited that you use our website."
-        };
+        WelcomeMessageViewModel message = await mediator.Send(command);
         return Ok(message);
     }
 }
