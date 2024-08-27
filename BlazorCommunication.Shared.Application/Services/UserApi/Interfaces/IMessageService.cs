@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Shared.Commands.UserApi.CreateWelcomeMessage;
+using Shared.ViewModels.UserApi;
 
-namespace BlazorCommunication.Shared.Application.Services.UserApi.Interfaces
+namespace BlazorCommunication.Shared.Application.Services.UserApi.Interfaces;
+
+public interface IMessageService
 {
-    internal interface IMessageService
-    {
-    }
+    Task<WelcomeMessageViewModel> CreateWelcomeMessageAsync(CreateWelcomeMessageCommand command);
 }

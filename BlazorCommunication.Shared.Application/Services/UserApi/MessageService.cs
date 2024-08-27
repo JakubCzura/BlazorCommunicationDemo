@@ -1,13 +1,16 @@
 ﻿using BlazorCommunication.Shared.Application.Services.UserApi.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Shared.Commands.UserApi.CreateWelcomeMessage;
+using Shared.ViewModels.UserApi;
+using System.Net.Http.Json;
 
-namespace BlazorCommunication.Shared.Application.Services.UserApi
+namespace BlazorCommunication.Shared.Application.Services.UserApi;
+
+internal class MessageService(HttpClient httpClient) : IMessageService
 {
-    internal class MessageService : IMessageService
+    public async Task<WelcomeMessageViewModel> CreateWelcomeMessageAsync(CreateWelcomeMessageCommand command)
     {
+        HttpResponseMessage response = (await httpClient.PostAsJsonAsync("user-api/message/welcome", command))!;
+        response.EnsureSuccessStatusCode();
+        return (await response.Content.ReadFromJsonAsync<WelcomeMessageViewModel>())!;
     }
 }

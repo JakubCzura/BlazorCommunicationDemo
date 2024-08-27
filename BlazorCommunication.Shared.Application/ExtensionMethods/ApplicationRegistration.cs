@@ -12,6 +12,7 @@ public static class ApplicationRegistration
     {
         services.AddScoped<IWeatherForecastService, WeatherForecastService>();
         services.AddScoped<IUserService, UserService>();
+        services.AddScoped<IMessageService, MessageService>();
 
         return services;
     }

@@ -4,7 +4,7 @@ using Shared.ViewModels.UserApi;
 
 namespace UserApi.Application.Handlers.Queries.GetUserInfo;
 
-public class GetUserInfoQueryHandler : IRequestHandler<GetUserInfoQuery, UserViewModel>
+public class GetUserInfoQueryHandler: IRequestHandler<GetUserInfoQuery, UserViewModel>
 {
     public async Task<UserViewModel> Handle(GetUserInfoQuery request, 
                                             CancellationToken cancellationToken)

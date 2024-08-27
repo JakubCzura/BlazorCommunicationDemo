@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Shared.ViewModels.UserApi;
 
-namespace BlazorCommunication.Shared.Application.Services.UserApi.Interfaces
+namespace BlazorCommunication.Shared.Application.Services.UserApi.Interfaces;
+
+public interface IUserService
 {
-    internal interface IUserService
-    {
-    }
+    Task<UserViewModel> GetUserInfoAsync();
 }
