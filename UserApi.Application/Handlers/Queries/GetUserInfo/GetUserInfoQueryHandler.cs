@@ -1,5 +1,5 @@
 ﻿using MediatR;
-using Shared.Queries.UserApi;
+using Shared.Queries.UserApi.GetUserInfo;
 using Shared.ViewModels.UserApi;
 
 namespace UserApi.Application.Handlers.Queries.GetUserInfo;
