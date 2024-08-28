@@ -1,5 +1,6 @@
 ﻿@page "/weather"
 @using BlazorCommunication.Client.Components.WeatherForecast
+@using BlazorCommunication.Client.Components.Welcome
 
 <PageTitle>Weather</PageTitle>
 
@@ -7,4 +8,6 @@
 
 <p>This component demonstrates showing data.</p> <br/><br/><br/>
 
+<WelcomeComponent Name="John" LastName="Kowalski"/>
+<br/><br/>
 <WeatherForecastComponent />

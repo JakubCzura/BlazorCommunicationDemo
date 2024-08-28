@@ -9,7 +9,8 @@ builder.Services.AddCors(options =>
                       policy =>
                       {
                           policy.WithOrigins(builder.Configuration.GetValue<string>("UserInterface:Address")!)
-                                .AllowAnyOrigin();
+                                .AllowAnyOrigin()
+                                .AllowAnyHeader();
                       });
 });
 
