@@ -1,5 +1,5 @@
-﻿using Shared.Commands.UserApi.CreateWelcomeMessage;
-using Shared.ViewModels.UserApi;
+﻿using UserApi.Application.Commands.CreateWelcomeMessage;
+using UserApi.Application.ViewModels;
 
 namespace BlazorCommunication.Shared.Application.Services.UserApi.Interfaces;
 

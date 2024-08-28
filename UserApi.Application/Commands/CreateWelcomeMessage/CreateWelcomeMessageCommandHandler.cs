@@ -1,8 +1,7 @@
 ﻿using MediatR;
-using Shared.Commands.UserApi.CreateWelcomeMessage;
-using Shared.ViewModels.UserApi;
+using UserApi.Application.ViewModels;
 
-namespace UserApi.Application.Handlers.Commands.CreateWelcomeMessage;
+namespace UserApi.Application.Commands.CreateWelcomeMessage;
 
 public class CreateWelcomeMessageCommandHandler : IRequestHandler<CreateWelcomeMessageCommand, WelcomeMessageViewModel>
 {

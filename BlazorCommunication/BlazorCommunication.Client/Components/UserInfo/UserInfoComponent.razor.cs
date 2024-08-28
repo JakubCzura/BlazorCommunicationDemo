@@ -1,6 +1,6 @@
 ﻿using BlazorCommunication.Shared.Application.Services.UserApi.Interfaces;
 using Microsoft.AspNetCore.Components;
-using Shared.ViewModels.UserApi;
+using UserApi.Application.ViewModels;
 
 namespace BlazorCommunication.Client.Components.UserInfo;
 

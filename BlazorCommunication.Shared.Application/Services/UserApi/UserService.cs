@@ -1,6 +1,6 @@
 ﻿using BlazorCommunication.Shared.Application.Services.UserApi.Interfaces;
-using Shared.ViewModels.UserApi;
 using System.Net.Http.Json;
+using UserApi.Application.ViewModels;
 
 namespace BlazorCommunication.Shared.Application.Services.UserApi;
 

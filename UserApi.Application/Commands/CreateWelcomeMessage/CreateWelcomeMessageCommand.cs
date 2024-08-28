@@ -1,7 +1,7 @@
 ﻿using MediatR;
-using Shared.ViewModels.UserApi;
+using UserApi.Application.ViewModels;
 
-namespace Shared.Commands.UserApi.CreateWelcomeMessage;
+namespace UserApi.Application.Commands.CreateWelcomeMessage;
 
 public class CreateWelcomeMessageCommand : IRequest<WelcomeMessageViewModel>
 {

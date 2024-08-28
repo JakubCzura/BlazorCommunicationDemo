@@ -1,7 +1,7 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Shared.Queries.UserApi.GetUserInfo;
-using Shared.ViewModels.UserApi;
+using UserApi.Application.Queries.GetUserInfo;
+using UserApi.Application.ViewModels;
 
 namespace UserApi.Controllers;
 

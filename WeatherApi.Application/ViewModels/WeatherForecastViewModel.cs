@@ -1,6 +1,6 @@
-﻿using Shared.Dtos.WeatherApi;
+﻿using WeatherApi.Application.Dtos;
 
-namespace Shared.ViewModels.WeatherApi;
+namespace WeatherApi.Application.ViewModels;
 
 public class WeatherForecastViewModel
 {

@@ -1,4 +1,4 @@
-﻿using Shared.ViewModels.UserApi;
+﻿using UserApi.Application.ViewModels;
 
 namespace BlazorCommunication.Shared.Application.Services.UserApi.Interfaces;
 

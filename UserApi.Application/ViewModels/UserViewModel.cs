@@ -1,4 +1,4 @@
-﻿namespace Shared.ViewModels.UserApi;
+﻿namespace UserApi.Application.ViewModels;
 
 public class UserViewModel
 {

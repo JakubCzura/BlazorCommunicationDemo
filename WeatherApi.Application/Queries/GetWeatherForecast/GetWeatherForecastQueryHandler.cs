@@ -1,9 +1,8 @@
 ﻿using MediatR;
-using Shared.Dtos.WeatherApi;
-using Shared.Queries.WeatherApi.GetWeatherForecast;
-using Shared.ViewModels.WeatherApi;
+using WeatherApi.Application.Dtos;
+using WeatherApi.Application.ViewModels;
 
-namespace WeatherApi.Application.Handlers.Queries.GetWeatherForecast;
+namespace WeatherApi.Application.Queries.GetWeatherForecast;
 
 public class GetWeatherForecastQueryHandler : IRequestHandler<GetWeatherForecastQuery, WeatherForecastViewModel>
 {

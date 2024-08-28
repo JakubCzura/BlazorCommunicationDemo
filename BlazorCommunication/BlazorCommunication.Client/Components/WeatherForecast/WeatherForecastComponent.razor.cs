@@ -1,6 +1,6 @@
 ﻿using BlazorCommunication.Shared.Application.Services.WeatherApi.Interfaces;
 using Microsoft.AspNetCore.Components;
-using Shared.ViewModels.WeatherApi;
+using WeatherApi.Application.ViewModels;
 
 namespace BlazorCommunication.Client.Components.WeatherForecast;
 

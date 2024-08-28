@@ -1,12 +1,11 @@
 ﻿using MediatR;
-using Shared.Queries.UserApi.GetUserInfo;
-using Shared.ViewModels.UserApi;
+using UserApi.Application.ViewModels;
 
-namespace UserApi.Application.Handlers.Queries.GetUserInfo;
+namespace UserApi.Application.Queries.GetUserInfo;
 
-public class GetUserInfoQueryHandler: IRequestHandler<GetUserInfoQuery, UserViewModel>
+public class GetUserInfoQueryHandler : IRequestHandler<GetUserInfoQuery, UserViewModel>
 {
-    public async Task<UserViewModel> Handle(GetUserInfoQuery request, 
+    public async Task<UserViewModel> Handle(GetUserInfoQuery request,
                                             CancellationToken cancellationToken)
     {
         UserViewModel user = new()

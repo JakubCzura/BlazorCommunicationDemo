@@ -1,8 +1,7 @@
 ﻿using BlazorCommunication.Shared.Application.Services.UserApi.Interfaces;
 using Microsoft.AspNetCore.Components;
-using Shared.Commands.UserApi.CreateWelcomeMessage;
-using Shared.ViewModels.UserApi;
-using System.Net.Http.Json;
+using UserApi.Application.Commands.CreateWelcomeMessage;
+using UserApi.Application.ViewModels;
 
 namespace BlazorCommunication.Client.Components.Welcome;
 

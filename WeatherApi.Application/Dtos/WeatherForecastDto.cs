@@ -1,4 +1,4 @@
-﻿namespace Shared.Dtos.WeatherApi;
+﻿namespace WeatherApi.Application.Dtos;
 
 public class WeatherForecastDto
 {

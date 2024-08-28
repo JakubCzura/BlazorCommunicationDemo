@@ -1,6 +1,6 @@
 ﻿using BlazorCommunication.Shared.Application.Services.WeatherApi.Interfaces;
-using Shared.ViewModels.WeatherApi;
 using System.Net.Http.Json;
+using WeatherApi.Application.ViewModels;
 
 namespace BlazorCommunication.Shared.Application.Services.WeatherApi;
 

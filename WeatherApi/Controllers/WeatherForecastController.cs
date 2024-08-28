@@ -1,7 +1,7 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Shared.Queries.WeatherApi.GetWeatherForecast;
-using Shared.ViewModels.WeatherApi;
+using WeatherApi.Application.Queries.GetWeatherForecast;
+using WeatherApi.Application.ViewModels;
 
 namespace WeatherApi.Controllers;
 

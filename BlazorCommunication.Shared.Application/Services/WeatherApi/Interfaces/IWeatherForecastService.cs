@@ -1,4 +1,4 @@
-﻿using Shared.ViewModels.WeatherApi;
+﻿using WeatherApi.Application.ViewModels;
 
 namespace BlazorCommunication.Shared.Application.Services.WeatherApi.Interfaces;
 
